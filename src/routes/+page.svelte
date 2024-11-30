@@ -1,4 +1,10 @@
-<div class="flex flex-col justify-center items-center bg-black text-white min-h-screen">
-    <h1 class="text-3xl font-bold">Hello World</h1>
-    <a href="/autores">Autores</a>
+<script>
+  import ItemSerie from "../components/series/[id]/ItemSerie.svelte";
+  import series from "../constants/series";
+</script>
+
+<div class="flex flex-col gap-5">
+  {#each series as serie}
+    <ItemSerie {serie} />
+  {/each}
 </div>
